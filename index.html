@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKURU QUARTET ガイド</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00c0ff, #ff80ff);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #444;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #666;
+            border-left: 5px solid #00c0ff;
+            padding-left: 1rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            color: #666;
+            border-bottom: 2px solid #ff80ff;
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .toc {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc ul ul {
+            padding-left: 1.5rem;
+        }
+
+        .toc li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff80ff;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .important {
+            background: #ffe8f3;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff80ff;
+        }
+
+        .credits {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: counter(step-counter);
+            background: #00c0ff;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="logo-container">
+                <img src="中の人用/素材/LogoColor.png" alt="MEKURU QUARTET Logo" class="logo">
+            </div>
+            
+            <div class="toc">
+                <h2>目次</h2>
+                <ul>
+                    <li><a href="#about">MEKURU QUARTETとは</a></li>
+                    <li><a href="#player">プレイヤーへ</a>
+                        <ul>
+                            <li><a href="#preparation">遊び方（準備編）</a></li>
+                            <li><a href="#gameplay">遊び方（試合編）</a></li>
+                            <li><a href="#tools">プレイを楽にするツール</a></li>
+                            <li><a href="#rules">超重要なルール</a></li>
+                            <li><a href="#deck">楽しいデッキ構築</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#calc">ダメージ計算機の使い方</a></li>
+                    <li><a href="#cocofo">ココフォリアでの遊び方</a></li>
+                    <li><a href="#creator">中の人へ</a></li>
+                    <li><a href="#starter">StarterPackについて</a></li>
+                </ul>
+            </div>
+
+            <section id="about" class="section">
+                <h2>MEKURU QUARTETとは</h2>
+                <p>UTAU音源をカードにして遊べるカードゲームです。</p>
+            </section>
+
+            <section id="player" class="section">
+                <h2>プレイヤーへ</h2>
+                
+                <section id="preparation">
+                    <h3>遊び方（準備編）</h3>
+                    <ol>
+                        <li>キャラクターカードとイベントカードを集めます
+                            <ul>
+                                <li>カードはUTAU音源配布者が個別に配っています。</li>
+                                <li>カードは<a href="https://docs.google.com/spreadsheets/d/1XCd-zbI_efEvsHp0WcsCZyT-5fbEEiKIEbiGeUyAL10/edit?usp=sharing">カード一覧ページ</a>で探せます</li>
+                            </ul>
+                        </li>
+                        <li>試合で使うデッキを考えて遊びます。楽しい！</li>
+                    </ol>
+                </section>
+
+                <section id="gameplay">
+                    <h3>遊び方（試合編）</h3>
+                    <ol>
+                        <li>プレイヤーを集めます
+                            <ul>
+                                <li>基本2人プレイですが、実は原理上何人でも遊べます</li>
+                            </ul>
+                        </li>
+                        <li>ゲームモードを決めます
+                            <ul>
+                                <li>2種類のゲームモードがあります。おすすめは「スムーズ」</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://docs.google.com/document/d/1XyHK-8kM1fAKxjFLPrCCl_v_efnwIY0kGPpS9jPsRZo/edit?usp=sharing">ルールブック</a>の「基本のルール」に沿ってプレイ！</li>
+                    </ol>
+                </section>
+
+                <section id="tools">
+                    <h3>プレイを楽にするツール</h3>
+                    <ul>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1wyAga36mW3EYkHKV919qnaDZzO98_GQNgcTGmIkmnIA/edit?gid=1710949408#gid=1710949408">ダメージ計算機</a></li>
+                        <li>オンライン対戦には「ココフォリア」がおすすめ</li>
+                    </ul>
+                </section>
+
+                <section id="rules" class="important">
+                    <h3>超重要なルール</h3>
+                    <ul>
+                        <li>「自分が持っている音源」しか使えません</li>
+                        <li>「チューニング」機能でカードのステータスを調整できます</li>
+                    </ul>
+                </section>
+
+                <section id="deck">
+                    <h3>楽しいデッキ構築</h3>
+                    <p>UTAUならではのデッキ構築が可能です：</p>
+                    <ul>
+                        <li>自音源デッキ</li>
+                        <li>表情音源デッキ</li>
+                        <li>動画使用音源デッキ</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section id="calc" class="section">
+                <h2>ダメージ計算機の使い方</h2>
+                <p>ダメージ計算機は、MEKURU QUARTETのちょっと複雑なダメージ計算を楽にしてくれるツールです。</p>
+                
+                <ol class="steps">
+                    <li><a href="https://docs.google.com/spreadsheets/d/1wyAga36mW3EYkHKV919qnaDZzO98_GQNgcTGmIkmnIA/edit?gid=1710949408#gid=1710949408">ダメージ計算機</a>を開きます</li>
+                    <li>「ファイル」→「コピーを作成」で自分専用のシートを作ります</li>
+                    <li>対戦相手のシートのURLを「使い方」タブの「対戦相手のシートのURLを↓に入力！」に入力</li>
+                    <li>「ダメージ計算機＆山札処理」タブでカードの編成やダメージ計算が可能</li>
+                    <li>「イベントカード」タブでイベントカードデッキを組もう</li>
+                </ol>
+
+                <p>スマホ版は<a href="https://docs.google.com/spreadsheets/d/13E0ZnjTpE30yNtFr5y9NyQtwVsJT6cHeFKFJZsjnGuc/edit?gid=1710949408#gid=1710949408">こちら</a>から利用できます。</p>
+            </section>
+
+            <section id="cocofo" class="section">
+                <h2>ココフォリアでの遊び方</h2>
+                <ol class="steps">
+                    <li>ココフォリアに登録</li>
+                    <li>マイルームに移行</li>
+                    <li>右下の「+」ボタンから新規ルームを作成</li>
+                    <li>画面を右クリック→「前景・背景を変更」でプレイマットを設定（137*80推奨）</li>
+                    <li>「ダメージ計算機」の「ココフォリア駒出力」タブでコマンドをコピー</li>
+                    <li>ココフォリアの画面でペーストして駒を表示</li>
+                    <li>設定からカード画像の追加やサイズ変更が可能（推奨サイズ：16）</li>
+                    <li>イベントカードは右上の「スクリーンパネル」からアップロード</li>
+                    <li>イベントカードを右クリックして「山札を作る」</li>
+                    <li>準備完了！</li>
+                </ol>
+            </section>
+
+            <section id="creator" class="section">
+                <h2>中の人へ</h2>
+                
+                <h3>キャラカードの作り方</h3>
+                <ol class="steps">
+                    <li>カード化したいUTAU音源とクラシックUTAUエディタを用意</li>
+                    <li>UTAUで音源を読み込み、隠しコマンドで"数字"を出す</li>
+                    <li>StarterPackの「中の人用」フォルダの「ステータス計算機」で変換</li>
+                    <li>属性やクラス、スキル名を設定</li>
+                    <li>シンプルカードメーカーやテンプレートでビジュアルを作成</li>
+                </ol>
+
+                <h3>イベントカードの作り方</h3>
+                <ol class="steps">
+                    <li>カード名を考える</li>
+                    <li>用意された効果の中から選択</li>
+                    <li>ビジュアルを作成</li>
+                </ol>
+
+                <h3>カードの登録</h3>
+                <p>作成したカードは以下のフォームから登録できます：</p>
+                <ul>
+                    <li><a href="https://forms.gle/YjNxuetQe8EnsB1P8">キャラクターカード登録</a></li>
+                    <li><a href="https://forms.gle/E7MCKrHZDJon9VGR6">イベントカード登録</a></li>
+                </ul>
+            </section>
+
+            <section id="starter" class="section">
+                <h2>StarterPackについて</h2>
+                <p>StarterPackには、プレイとカード作りに必要な基本的なカード、素材、ツールが全て含まれています。</p>
+                
+                <div class="credits">
+                    <h3>収録データ制作者</h3>
+                    <ul>
+                        <li>ロゴ：くろ州</li>
+                        <li>各種HTML：くろ州</li>
+                        <li>StarterPack：くろ州</li>
+                        <li>各種ドキュメント：くろ州</li>
+                        <li>イベントカード：はち はじめ</li>
+                        <li>カード素材：はち はじめ</li>
+                        <li>プレイマット：バケモン</li>
+                        <li>ダメージ計算機：月見酒夜桜</li>
+                        <li>スマホ版ダメージ計算機：月見酒夜桜</li>
+                        <li>初プレイ向けデッキ集：月見酒夜桜</li>
+                        <li>みんなで作る共有デッキリスト：月見酒夜桜</li>
+                    </ul>
+
+                    <h4>キャラクターカード制作者</h4>
+                    <ul>
+                        <li>はち はじめ</li>
+                        <li>かたつむり観光客</li>
+                        <li>まさむつ/Masamutsu</li>
+                        <li>ペトリ皿エタノール</li>
+                        <li>中性石鹸</li>
+                        <li>吊り下げ式看晩</li>
+                        <li>mole*</li>
+                        <li>如月</li>
+                        <li>闇塚/黒塚朔</li>
+                        <li>月見酒夜桜</li>
+                        <li>振歌</li>
+                        <li>MONOKO</li>
+                        <li>T7（てな）</li>
+                        <li>ぱやお</li>
+                        <li>ルシエル</li>
+                        <li>茂野つみき</li>
+                        <li>鱧河まるまろ</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
